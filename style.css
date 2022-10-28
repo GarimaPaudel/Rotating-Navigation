@@ -1,27 +1,35 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
-    overflow-x:hidden ;
+
+body {
+    overflow-x: hidden;
     margin: 0;
+    background-color: #333;
+    color: #222;
+   
 }
-.container{
+
+.container {
     background-color: #fafafa;
     transform-origin: top left;
-    transition: 0.5s linear;
+    transition: transform 0.5s linear;
     width: 100vw;
     min-height: 100vh;
     padding: 50px;
 }
-.container.show-nav{
+
+.container.show-nav {
     transform: rotate(-20deg);
 }
-.circle-container{
+
+.circle-container {
     position: fixed;
     top: -100px;
     left: -100px;
 }
-.circle{
+
+.circle {
     background-color: #ff7979;
     height: 200px;
     width: 200px;
@@ -29,48 +37,56 @@ body{
     position: relative;
     transition: transform 0.5s linear;
 }
-.container.show-nav .circle{
+
+.container.show-nav .circle {
     transform: rotate(-70deg);
 }
-.circle button{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100px;
-  background: transparent;
-  border: 0;
-  font-size: 26px;
-  color: #fff;
+
+.circle button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border: 0;
+    font-size: 26px;
+    color: #fff;
 
 }
-.circle button:focus{
+
+.circle button:focus {
     outline: none;
 }
-.circle button#open{
+
+.circle button#open {
     left: 60%;
 }
-.circle button#close{
+
+.circle button#close {
     top: 60%;
-    transform: rotate(90deg) ;
+    transform: rotate(90deg);
     transform-origin: top left;
 }
 
-.container .show-nav + nav li{
+.container.show-nav+nav li {
     transform: translateX(0);
     transition-delay: 0.3s;
 }
-nav{
+
+nav {
     position: fixed;
     bottom: 40px;
     left: 0;
     z-index: 100;
 }
 
-nav ul{
-    list-style-type:none ;
+nav ul {
+    list-style-type: none;
     padding-left: 30px;
 
 }
+
 nav ul li{
     text-transform: uppercase;
     color: #fff;
@@ -78,34 +94,44 @@ nav ul li{
     transform: translateX(-100%);
     transition: transform 0.4s ease-in;
 }
-nav ul li i{
+
+nav ul li i {
     font-size: 20px;
     margin-right: 10px;
 }
-nav ul li + li{
-    margin-left: 15px ;
-     transform: translateX(-150%);
+
+nav ul li + li {
+    margin-left: 15px;
+    transform: translateX(-150%);
 
 }
-nav ul li + li + li{
-    margin-left: 15px ; 
+
+nav ul li + li + li {
+    margin-left: 30px;
     transform: translateX(-200%);
 }
-.content img{
+
+.content img {
     max-width: 100%;
+    height: 200px;
+    width: 200px;
 }
-.content{
+
+.content {
     max-width: 1000px;
     margin: 50px auto;
 }
-.content h1{
+
+.content h1 {
     margin: 0;
 }
-.content small{
+
+.content small {
     color: #555;
     font-style: italic;
 }
-.content p{
+
+.content p {
     color: #333;
     line-height: 1.5;
 }
